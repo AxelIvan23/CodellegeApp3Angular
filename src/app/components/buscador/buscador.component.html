@@ -1,0 +1,14 @@
+<div class="container mb-5">
+	<div class="card-columns mt-5 pb-5 mx-3">
+	  <div class="card" *ngFor="let results of Resultados">
+	  	 <div class="card-header bg-transparent border-success">{{results.model}}</div>
+	    <img class="card-img-top" src="{{results.img}}" alt="Card image cap">
+	    <div class="card-body">
+	      <h5 class="card-title">{{results.brand}}</h5>
+	      <p class="card-text">{{results.description}}</p>
+	      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+	      <button  (click)="Navegar(results.model)" class="btn-custom bg-custom2 btn-block">Ver mas...</button>
+	    </div>
+	  </div> 
+	</div>
+</div>

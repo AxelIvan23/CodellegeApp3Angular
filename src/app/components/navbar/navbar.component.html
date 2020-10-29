@@ -7,8 +7,8 @@
   	<div class="row">
   	  <a class="navbar-brand col-4 mr-0 pr-0 pl-5" href="#"><img src="../../assets/img/logo.png" class="logo"></a>
 	  <form class="form-inline my-2 my-lg-0 col-8 row">
-	      <input class="form-control mr-sm-2 col-7" type="search" placeholder="Search" aria-label="Search">
-	      <button class="btn-custom bg-custom2 my-2 my-sm-0 col-3" type="submit">Search</button>
+	      <input class="form-control mr-sm-2 col-7" type="search" #valorBuscar placeholder="Search" aria-label="Search">
+	      <button class="btn-custom bg-custom2 my-2 my-sm-0 col-3" (click)="Search(valorBuscar.value)" type="submit">Search</button>
 	  </form>
   	</div>
   	<br>
@@ -21,13 +21,13 @@
 	        <a class="nav-link" (click)="Navegar('SmartPhones')">Smartphones</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">Cameras</a>
+	        <a class="nav-link" (click)="Navegar('Fotografía')">Cameras</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link disabled" href="#">Electric devices</a>
+	        <a class="nav-link" (click)="Navegar('Línea Blanca')">Electric devices</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link disabled" href="#">About</a>
+	        <a class="nav-link" [routerLink]="['About']">About</a>
 	      </li>
 	    </ul>
 	</div>

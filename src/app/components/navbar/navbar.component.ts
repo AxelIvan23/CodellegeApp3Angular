@@ -16,4 +16,8 @@ export class NavbarComponent implements OnInit {
   Navegar(index) {
   		this._router.navigate(['/products/', index]);
   }
+
+  Search(searchValue) {
+  		this._router.navigate(['/resultado/',searchValue]);
+  }
 }

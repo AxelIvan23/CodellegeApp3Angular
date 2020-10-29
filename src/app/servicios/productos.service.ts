@@ -240,14 +240,32 @@ export class ProductosService {
   		return this.Productos;
   }
   public getProductType(tipo) {
-  		let resultado: any[];
+  		let resultado: any=[];
   		for (const producto of this.Productos) {
-  			if (producto.indexOf(tipo)>=0)
+  			if (producto.department.indexOf(tipo)>=0)
   				resultado.push(producto);
   		}
   		/*for (let i=0; i<this.Productos.length(); i++) {
 
   		}*/
+  		return resultado;
+  }
+  public getProductNom(tipo) {
+  		let resultado: any=[];
+  		tipo = tipo.toLowerCase();
+  		for (const producto of this.Productos) {
+  			const nombre = producto.model.toLowerCase();
+  			if (nombre.indexOf(tipo)>=0)
+  				resultado.push(producto);
+  		}
+  		return resultado;
+  }
+  public getProductId(id) {
+  		let resultado: any={};
+  		for (const producto of this.Productos) {
+  			if (producto.model.indexOf(id)>=0)
+  				resultado=producto;
+  		}
   		return resultado;
   }
 }

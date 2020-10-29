@@ -1,1 +1,39 @@
-<p>product works!</p>
+<div class="container my-5 pb-5">
+	<div class="row">
+		<img src="{{producto.img}}" class="col-5">
+		<div class="col-5">
+			<h2>{{producto.model}}</h2>
+			<small>{{producto.brand}}</small>
+			<h4>Precio: ${{producto.price}}</h4>
+			<br>
+			<div>
+				<h5>Meses sin intereses: </h5>
+				<div class="btn-group" role="group" aria-label="Basic example" *ngIf="producto.msi==true">
+				  <button type="button" class="btn btn-secondary">3</button>
+				  <button type="button" class="btn btn-secondary">6</button>
+				  <button type="button" class="btn btn-secondary">12</button>
+				</div>
+			</div>
+			<br>
+			<h5>
+				Rating: {{producto.rating}}
+				<div style="width: 115px;height: 24px; mix-blend-mode: darken;"> 
+					<div style="mix-blend-mode: exclusion;" class="rating">  
+						<div class="rating" id="star">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+						</div>
+					</div>
+					<div class="rating" id="ratingBack" style="background-color: white; display: block; width: 115px;">
+					</div>
+				</div>
+				
+				
+			</h5>
+			<p>{{producto.description}}</p>
+		</div>
+	</div>
+</div>

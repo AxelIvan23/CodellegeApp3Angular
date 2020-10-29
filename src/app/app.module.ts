@@ -10,6 +10,8 @@ import { MainComponent } from './components/main/main.component';
 import { ErrorComponent } from './components/error/error.component'; 
 
 import { RouterModule } from '@angular/router';
+import { BuscadorComponent } from './components/buscador/buscador.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { RouterModule } from '@angular/router';
     ProductsComponent,
     ProductComponent,
     MainComponent,
-    ErrorComponent
+    ErrorComponent,
+    BuscadorComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +32,8 @@ import { RouterModule } from '@angular/router';
       {path: 'home', component: MainComponent},
       {path: 'products/:type', component: ProductsComponent},
       {path: 'product/:id', component: ProductComponent},
+      {path: 'resultado/:result', component: BuscadorComponent},
+      {path: 'About', component: AboutComponent}, 
       {path: 'home', component: MainComponent},
       {path: '**', pathMatch: 'full', component: ErrorComponent}
     ]),

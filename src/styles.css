@@ -11,7 +11,7 @@
 	background-color: #52de97;
 }
 .bg-custom4 {
-	background-color: #c0ffb3;
+	background-color: #e7e7de;
 }
 .btn-custom {
 	background-color: #3c9d9b;
@@ -37,3 +37,61 @@ footer {
 	bottom: 0; 
 	width: 100%;
 }
+.card {
+	width: 40vw;
+}
+.card img {
+	height: 40vh;
+	width: 100%;
+}
+
+.nav-item a {
+	cursor: pointer;
+}
+
+a {
+	cursor: pointer;
+}
+
+#digital {
+	position: relative;
+	left: 550px;
+}
+
+#title{
+	text-align: center;
+	margin-top: 5px;
+	font-size: 35px;
+}
+
+#about{
+	height: 300px;
+	width: 230px; 
+}
+
+.super {
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold; 
+}
+
+#star {
+	color: black;
+	z-index: 0;
+	display: block;
+}
+
+.rating {
+	position: absolute; 
+	width: 115px;
+	height: 24px; 
+}
+
+#ratingBack{
+	transform-origin: right;
+}
+
+.border-custom {
+	border: solid #3c9d9b 1px;
+}
+
